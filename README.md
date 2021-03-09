@@ -55,3 +55,9 @@ To specify the segment time, framerate, resolution or even the filename, use the
 ```
 python3 dashcam.py -t <segment time> -f <framerate> -w <width> -h <height> -n <name>
 ```
+Default values are set at
+- segment = 60
+- fps = 17
+- width = 1280
+- height = 720
+- fname = 'video-%0.4d'
