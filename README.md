@@ -31,6 +31,7 @@ Now you need to enable the camera  using the raspi-config
 sudo raspi-config
 ```
 Using the cursor keys, select and open 'Interfacing Options' then select 'Camera'
+
 Follow the prompt to enable the camera and reboot the device
 
 To test that the system is installed and working, try the following command:
@@ -62,7 +63,9 @@ Default values are set at
 - Resolution = 1280x720
 
 Last step is setting up a crontab job to launch the program when the device boot up
+
 Copy the script to the home direcotry
+
 Open the temrinal and type
 ```
 crontab -e
