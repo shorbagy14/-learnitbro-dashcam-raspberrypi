@@ -4,12 +4,16 @@ import os
 import random
 import sys
 import getopt
+import time
 
 segment = 60
 fps = 17
 width = 1280
 height = 720
-fname = 'video-%0.4d'
+
+def current_milli_time():
+    return round(time.time() * 1000)
+
 def convert(seconds): 
     seconds = seconds % (24 * 3600) 
     hour = seconds // 3600
@@ -19,13 +23,13 @@ def convert(seconds):
       
     return "%d:%02d:%02d" % (hour, minutes, seconds) 
 try:
-    opts, args = getopt.getopt(sys.argv[1:], "t:f:w:h:n:",['time=','framerate=', 'width=', 'height=', 'name='])
+    opts, args = getopt.getopt(sys.argv[1:], "t:f:w:h:",['time=','framerate=', 'width=', 'height='])
 except getopt.GetoptError:
-    print('Invalid arguments, use the following flags -t <time> -f <framerate> -w <width> -h <height> -n <name>')
+    print('Invalid arguments, use the following flags -t <time> -f <framerate> -w <width> -h <height>')
     sys.exit(2)
 for opt, arg in opts:
    if opt == '-help':
-      print('camera.py -t <time> -f <framerate> -w <width> -h <height> -n <name>')
+      print('camera.py -t <time> -f <framerate> -w <width> -h <height>')
       sys.exit()
    elif opt in ("-t", "--time"):
      segment = int(arg)
@@ -35,13 +39,11 @@ for opt, arg in opts:
      width = int(arg)
    elif opt in ("-h", "--height"):
      height = int(arg)
-   elif opt in ("-n", "--name"):
-     fname = arg
+
 print('Segment time is ', segment)
 print('Frame rate is ', fps)
 print('Width is ', width)
 print('Height is ', height)
-print('Name is ', fname)
 
 video_codec = cv2.VideoWriter_fourcc(*'MP4V')
 name = 'output'
@@ -56,6 +58,7 @@ ret = cap.set(3, width)
 ret = cap.set(4, height)
 cur_dir = os.path.dirname(os.path.abspath(sys.argv[0]))
 
+fname = str(current_milli_time())
 video_file_count = 1
 video_file = os.path.join(name, fname % video_file_count + ".mp4")
 print("Capture video saved location : {}".format(video_file))
