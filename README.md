@@ -51,15 +51,14 @@ Now run the program
 ```
 python3 dashcam.py
 ```
-To specify the segment time, framerate, resolution or even the filename, use the command below
+To specify the video segment time, framerate and resolution, use the command below
 ```
-python3 dashcam.py -t <segment time> -f <framerate> -w <width> -h <height> -n <name>
+python3 dashcam.py -t <segment time> -f <framerate> -w <width> -h <height>
 ```
 Default values are set at
 - Segmention Time = 60 seconds
 - Framerate = 17 frame per second
 - Resolution = 1280x720
-- Name Format = video-%0.4d >> video-0001.mp4, video-0002.mp4, video-003.mp4
 
 Last step is setting up a crontab job to launch the program when the device boot up
 Copy the script to the home direcotry
@@ -69,6 +68,6 @@ crontab -e
 ```
 Then add the command below
 ```
-@reboot python3 dashcam.py -t 60 -f 17 -w 1280 -h 720 -n video-%0.4d
+@reboot python3 dashcam.py -t 60 -f 17 -w 1280 -h 720
 ```
 Now the dashcam script will start when the device boot up and the camera will store the videos in the output folder
