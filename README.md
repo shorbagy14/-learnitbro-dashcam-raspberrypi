@@ -56,8 +56,17 @@ To specify the segment time, framerate, resolution or even the filename, use the
 python3 dashcam.py -t <segment time> -f <framerate> -w <width> -h <height> -n <name>
 ```
 Default values are set at
-- segment = 60
-- fps = 17
-- width = 1280
-- height = 720
-- fname = 'video-%0.4d'
+- Segmention Time = 60 seconds
+- Framerate = 17 frame per second
+- Resolution = 1280x720
+- Name Format = video-%0.4d >> video-0001, video-0002, video-003
+
+Last step is setting up a crontab job to launch the program when the device boot up
+Copy the script to the home direcotry
+Open the temrinal and type
+```
+crontab -e
+```
+Then add the command below
+```@reboot python3 dashcam.py -t 60 -f 17 -w 1280 -h 720 -n video-%0.4d
+```
