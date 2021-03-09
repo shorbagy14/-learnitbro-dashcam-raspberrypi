@@ -3,6 +3,7 @@ Dashcam recording script for raspberry pi (open source tool developed by [learni
 
 ### Steps:
 - Download the script
+- Configure the camera
 - Setup a crontab job
 - Turn on the raspberry pi
 
