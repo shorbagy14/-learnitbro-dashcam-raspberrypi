@@ -1,3 +1,5 @@
+# ![](images/dashcam.png)
+
 ### Description: 
 Dashcam recording script for raspberry pi (open source tool developed by [learnitbro.com](https://learnitbro.com/))
 
