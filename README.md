@@ -10,6 +10,13 @@ Dashcam recording script for raspberry pi (open source tool developed by [learni
 - opencv
 - python 3
 
+### Hardware:
+- Raspberry Pi 4 4GB
+- Raspberry Pi Camera Module V2-8 Megapixel
+- Camera/Phone Car Mount
+- Car Charger Adapter 2.4A
+- Type-C Cable
+
 ### Configuration:
 First, you need to setup the camera
 
