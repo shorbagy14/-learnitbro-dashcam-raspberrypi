@@ -59,7 +59,7 @@ Default values are set at
 - Segmention Time = 60 seconds
 - Framerate = 17 frame per second
 - Resolution = 1280x720
-- Name Format = video-%0.4d >> video-0001, video-0002, video-003
+- Name Format = video-%0.4d >> video-0001.mp4, video-0002.mp4, video-003.mp4
 
 Last step is setting up a crontab job to launch the program when the device boot up
 Copy the script to the home direcotry
