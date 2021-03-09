@@ -30,7 +30,7 @@ Now you need to enable the camera  using the raspi-config
 ```
 sudo raspi-config
 ```
-Use the cursor keys select and open Interfacing Options then select Camera
+Using the cursor keys, select and open 'Interfacing Options' then select 'Camera'
 Follow the prompt to enable the camera and reboot the device
 
 To test that the system is installed and working, try the following command:
