@@ -58,9 +58,9 @@ ret = cap.set(3, width)
 ret = cap.set(4, height)
 cur_dir = os.path.dirname(os.path.abspath(sys.argv[0]))
 
-fname = str(current_milli_time())
+fname = current_milli_time()
 video_file_count = 1
-video_file = os.path.join(name, fname % video_file_count + ".mp4")
+video_file = os.path.join(name, "%d-%d" % (fname, video_file_count)  + ".mp4")
 print("Capture video saved location : {}".format(video_file))
 # Create a video write before entering the loop
 video_writer = cv2.VideoWriter(
@@ -78,7 +78,7 @@ while cap.isOpened():
         if vt > segment*1000:
             frameCount = 0
             video_file_count += 1
-            video_file = os.path.join(name, fname % video_file_count + ".mp4")
+            video_file = os.path.join(name, "%d-%d" % (fname, video_file_count)  + ".mp4")
             video_writer = cv2.VideoWriter(
                 video_file, video_codec, fps, (int(cap.get(3)), int(cap.get(4)))
             )
