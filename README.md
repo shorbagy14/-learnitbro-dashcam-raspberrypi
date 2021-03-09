@@ -21,6 +21,8 @@ Dashcam recording script for raspberry pi (open source tool developed by [learni
 - Car Charger Adapter 2.4A
 - Type-C Cable
 
+# ![](images/pi.png)
+
 ### Configuration:
 First, you need to setup the camera
 
@@ -42,6 +44,9 @@ To test that the system is installed and working, try the following command:
 raspistill -v -o test.jpg
 raspivid -o vid.h264
 ```
+
+# ![](images/camera.png)
+
 Now you need to install python opencv and its dependencies
 ```
 pip3 install opencv-python
