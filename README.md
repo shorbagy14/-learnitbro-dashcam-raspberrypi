@@ -68,5 +68,7 @@ Open the temrinal and type
 crontab -e
 ```
 Then add the command below
-```@reboot python3 dashcam.py -t 60 -f 17 -w 1280 -h 720 -n video-%0.4d
 ```
+@reboot python3 dashcam.py -t 60 -f 17 -w 1280 -h 720 -n video-%0.4d
+```
+Now the dashcam script will start when the device boot up and the camera will store the videos in the output folder
