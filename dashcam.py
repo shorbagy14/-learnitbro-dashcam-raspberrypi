@@ -21,7 +21,7 @@ def convert(seconds):
 try:
     opts, args = getopt.getopt(sys.argv[1:], "t:f:w:h:n:",['time=','framerate=', 'width=', 'height=', 'name='])
 except getopt.GetoptError:
-    print('Invalid arguments- use the following flags -t <time> -f <framerate> -w <width> -h <height> -n <name>')
+    print('Invalid arguments, use the following flags -t <time> -f <framerate> -w <width> -h <height> -n <name>')
     sys.exit(2)
 for opt, arg in opts:
    if opt == '-help':
