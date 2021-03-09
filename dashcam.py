@@ -40,10 +40,10 @@ for opt, arg in opts:
    elif opt in ("-h", "--height"):
      height = int(arg)
 
-print('Segment time is ', segment)
-print('Frame rate is ', fps)
-print('Width is ', width)
-print('Height is ', height)
+print('Segment time: ', segment)
+print('Frame rate: ', fps)
+print('Width: ', width)
+print('Height: ', height)
 
 video_codec = cv2.VideoWriter_fourcc(*'MP4V')
 name = 'output'
