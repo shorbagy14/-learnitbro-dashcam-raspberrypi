@@ -1,7 +1,7 @@
-# ![](images/dashcam.png)
-
 ### Description: 
 Dashcam recording script for raspberry pi (open source tool developed by [learnitbro.com](https://learnitbro.com/))
+
+# ![](images/dashcam.png)
 
 ### Steps:
 - Download the script
@@ -16,6 +16,7 @@ Dashcam recording script for raspberry pi (open source tool developed by [learni
 ### Hardware:
 - Raspberry Pi 4 4GB
 - Raspberry Pi Camera Module V2-8 Megapixel
+- Raspberry Pi Case
 - Camera/Phone Car Mount
 - Car Charger Adapter 2.4A
 - Type-C Cable
