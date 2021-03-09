@@ -58,7 +58,7 @@ python3 dashcam.py -t <segment time> -f <framerate> -w <width> -h <height>
 ```
 Default values are set at
 - Segmention Time = 60 seconds
-- Framerate = 17 frame per second
+- Framerate = 17 frames per second
 - Resolution = 1280x720
 
 Last step is setting up a crontab job to launch the program when the device boot up
