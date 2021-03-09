@@ -7,8 +7,8 @@ Dashcam recording script for raspberry pi (open source tool developed by [learni
 - Turn on the raspberry pi
 
 ### Dependencies:
-opencv
-python
+- opencv
+- python 3
 
 ### Configuration:
 First, you need to setup the camera
